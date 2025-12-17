@@ -1,2 +1,2 @@
-# galsentuto_website
-Site web officiel de Galsen Tuto
+# GalsenTuto Website
+Projet Angular – site vitrine
