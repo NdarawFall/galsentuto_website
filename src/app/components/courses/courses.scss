@@ -1,0 +1,121 @@
+.courses-section {
+  background-color: var(--dark-light);
+}
+
+.filters {
+  display: flex;
+  justify-content: center;
+  gap: 1rem;
+  margin-bottom: 3rem;
+  flex-wrap: wrap;
+
+  .filter-btn {
+    background: transparent;
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    color: var(--light);
+    padding: 0.5rem 1.5rem;
+    border-radius: var(--radius-full);
+    cursor: pointer;
+    transition: all 0.3s ease;
+    font-family: var(--font-body);
+
+    &:hover, &.active {
+      background: var(--primary);
+      color: var(--dark);
+      border-color: var(--primary);
+    }
+  }
+}
+
+.courses-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(320px, 1fr));
+  gap: 2rem;
+}
+
+.course-card {
+  background: var(--dark);
+  border-radius: var(--radius-lg);
+  overflow: hidden;
+  transition: all 0.3s ease;
+  border: 1px solid rgba(255, 255, 255, 0.05);
+
+  &:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.3);
+    
+    .card-image {
+      transform: scale(1.05);
+    }
+  }
+
+  .card-image {
+    height: 200px;
+    background-color: #2a2a40;
+    position: relative;
+    transition: transform 0.5s ease;
+    
+    /* Placeholders gradients */
+    &.ai { background: linear-gradient(45deg, #2b5876 0%, #4e4376 100%); }
+    &.video { background: linear-gradient(45deg, #cc2b5e 0%, #753a88 100%); }
+    &.design { background: linear-gradient(45deg, #42275a 0%, #734b6d 100%); }
+
+    .category-tag {
+      position: absolute;
+      top: 1rem;
+      left: 1rem;
+      background: rgba(0, 0, 0, 0.6);
+      backdrop-filter: blur(5px);
+      padding: 0.3rem 0.8rem;
+      border-radius: var(--radius-sm);
+      font-size: 0.75rem;
+      font-weight: 600;
+    }
+  }
+
+  .card-content {
+    padding: 1.5rem;
+    position: relative;
+    z-index: 1;
+    background: var(--dark); /* Cover scaled image */
+  }
+
+  .meta {
+    display: flex;
+    justify-content: space-between;
+    font-size: 0.8rem;
+    color: var(--gray);
+    margin-bottom: 0.8rem;
+    
+    .level {
+      color: var(--primary);
+      font-weight: 600;
+    }
+  }
+
+  h3 {
+    font-size: 1.2rem;
+    margin-bottom: 0.8rem;
+    line-height: 1.4;
+  }
+
+  p {
+    color: var(--gray);
+    font-size: 0.9rem;
+    margin-bottom: 1.5rem;
+    display: -webkit-box;
+    -webkit-line-clamp: 2;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+  }
+
+  .btn-link {
+    color: var(--light);
+    font-weight: 600;
+    font-size: 0.9rem;
+    
+    &:hover {
+      color: var(--primary);
+    }
+  }
+}

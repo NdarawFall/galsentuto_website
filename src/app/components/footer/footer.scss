@@ -1,0 +1,126 @@
+.footer-section {
+  background-color: #0d0d16; /* Darker than body */
+  padding: 5rem 0 2rem;
+  font-size: 0.95rem;
+  color: var(--gray);
+}
+
+.footer-content {
+  display: grid;
+  grid-template-columns: 2fr 1fr 1fr 1.5fr;
+  gap: 3rem;
+  margin-bottom: 3rem;
+  
+  @media (max-width: 992px) {
+    grid-template-columns: 1fr 1fr;
+  }
+  
+  @media (max-width: 600px) {
+    grid-template-columns: 1fr;
+    gap: 2rem;
+  }
+}
+
+.footer-brand {
+  .logo {
+    font-size: 1.5rem;
+    font-weight: 700;
+    color: var(--light);
+    margin-bottom: 1rem;
+    display: block;
+  }
+  
+  p {
+    margin-bottom: 1.5rem;
+    max-width: 300px;
+  }
+}
+
+.social-links {
+  display: flex;
+  gap: 1rem;
+  
+  .social-btn {
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    background: rgba(255, 255, 255, 0.05);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: var(--light);
+    font-size: 0.8rem;
+    transition: all 0.3s ease;
+    
+    &:hover {
+      background: var(--primary);
+      color: var(--dark);
+      transform: translateY(-3px);
+    }
+  }
+}
+
+.footer-links {
+  h4 {
+    color: var(--light);
+    margin-bottom: 1.5rem;
+    font-size: 1.1rem;
+  }
+  
+  ul {
+    li {
+      margin-bottom: 0.8rem;
+      
+      a {
+        &:hover {
+          color: var(--primary);
+          padding-left: 5px;
+        }
+      }
+    }
+  }
+}
+
+.footer-newsletter {
+  h4 {
+    color: var(--light);
+    margin-bottom: 1.5rem;
+    font-size: 1.1rem;
+  }
+  
+  p {
+    margin-bottom: 1.5rem;
+  }
+  
+  .newsletter-form {
+    display: flex;
+    gap: 0.5rem;
+    
+    input {
+      flex: 1;
+      background: rgba(255, 255, 255, 0.05);
+      border: 1px solid rgba(255, 255, 255, 0.1);
+      padding: 0.8rem;
+      border-radius: var(--radius-md);
+      color: var(--light);
+      font-family: var(--font-body);
+      
+      &:focus {
+        outline: none;
+        border-color: var(--primary);
+      }
+    }
+    
+    button {
+      padding: 0.8rem 1.2rem;
+      font-size: 0.9rem;
+    }
+  }
+}
+
+.footer-bottom {
+  border-top: 1px solid rgba(255, 255, 255, 0.05);
+  padding-top: 2rem;
+  text-align: center;
+  font-size: 0.85rem;
+}

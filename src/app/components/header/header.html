@@ -1,0 +1,24 @@
+<header [class.scrolled]="isScrolled">
+  <div class="container navbar">
+    <!-- Logo -->
+    <a routerLink="/" class="logo" data-aos="fade-right" data-aos-duration="800">
+      Galsen<span class="text-primary">Tuto</span>
+    </a>
+
+    <!-- Desktop Navigation -->
+    <nav class="nav-links" [class.active]="isMenuOpen">
+      <a routerLink="/" routerLinkActive="active" [routerLinkActiveOptions]="{exact: true}" (click)="closeMenu()">Accueil</a>
+      <a routerLink="/about" routerLinkActive="active" (click)="closeMenu()">À Propos</a>
+      <a href="#services" (click)="closeMenu()">Services</a>
+      <a href="#courses" (click)="closeMenu()">Formations</a>
+      <a routerLink="/contact" routerLinkActive="active" (click)="closeMenu()">Contact</a>
+    </nav>
+
+    <!-- Mobile Menu Toggle -->
+    <div class="menu-toggle" (click)="toggleMenu()">
+      <span [class.open]="isMenuOpen"></span>
+      <span [class.open]="isMenuOpen"></span>
+      <span [class.open]="isMenuOpen"></span>
+    </div>
+  </div>
+</header>
